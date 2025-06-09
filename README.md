@@ -1,1 +1,1 @@
-# projeto-pr-tico
+# projeto-pratico
