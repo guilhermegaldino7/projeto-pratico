@@ -1,0 +1,17 @@
+-- Criação do Banco de Dados
+CREATE DATABASE IF NOT EXISTS `projeto-notas`;
+USE `projeto-notas`;
+
+-- Criação da Tabela de Usuários
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(100) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `usuario` (`usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- (Opcional) Inserir um usuário teste: admin / 123
+-- A senha abaixo é o hash de '123'
+INSERT INTO `usuarios` (`usuario`, `senha`) VALUES
+('admin', '$2y$10$Xw6sx.bQ/fT5s.W5p5T5ZO5r5T5ZO5r5T5ZO5r5T5ZO5r5T5ZO');
